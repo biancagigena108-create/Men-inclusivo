@@ -1,0 +1,6 @@
+{
+  "name": "Menú Inclusivo - Cartas Accesibles con Pictogramas y Braille",
+  "description": "Plataforma web para bares, restaurantes y comercios gastronómicos para crear y consultar cartas accesibles con pictogramas CAA, sistema Braille, lectura por voz y cumplimiento de la Ordenanza Municipal de Inclusión.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

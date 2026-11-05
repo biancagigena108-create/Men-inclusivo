@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Atkinson Hyperlegible', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Accessibility high-contrast styles */
+.theme-high-contrast-yellow {
+  --bg-primary: #000000;
+  --bg-surface: #121212;
+  --bg-subtle: #1f1f1f;
+  --text-primary: #ffff00;
+  --text-secondary: #fef08a;
+  --border-color: #ffff00;
+  --accent-color: #facc15;
+}
+
+.theme-sensory-calm {
+  --bg-primary: #f4f6f8;
+  --bg-surface: #ffffff;
+  --bg-subtle: #e5edf5;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --border-color: #cbd5e1;
+  --accent-color: #3b82f6;
+}
+
+/* Braille dot styles for tactile and visual representation */
+.braille-cell {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 2px;
+  width: 14px;
+  height: 20px;
+}
+
+.braille-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: currentColor;
+}
+
+.braille-dot-off {
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  border: 0.5px solid currentColor;
+  opacity: 0.2;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+}
